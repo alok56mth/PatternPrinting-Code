@@ -1,33 +1,25 @@
 /*
-4444444
-33333
-222
+Input: n = 5
+
 1
-2222
-333333
-44444444
+3 2
+6 5 4
+10 9 8 7
+15 14 13 12 11
  */
 
 
 public class PatternPrinting {
 
     public static void main(String[] args) {
-        int n = 4;
+        int n=5;
 
-        //Uppper part
-        for (int i = n; i > 0; i--) {
-            for (int j = 2 * i - 1; j > 0; j--) {
-                System.out.print(i);
+        for(int i=0; i<=n; i++){
+            int end = i*(i+1)/2;
+            for(int j=end; j>end-i; j--){
+                System.out.print(j + " ");
             }
-            System.out.println();
-        }
-
-        //lower Part
-        for (int i = 2; i <= n; i++) {
-            for (int j = 2 * i; j > 0; j--) {
-                System.out.print(i);
-            }
-            System.out.println();
+            System.err.println();
         }
     }
 }
